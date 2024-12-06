@@ -1,0 +1,393 @@
+html {
+    box-sizing: content-box;
+    width: 100%;
+}
+
+.body {
+    background-color: rgb(107, 107, 252);
+    margin: 0; 
+}
+
+/* TITRE QUIZ CULTURE GENERALE */
+
+.bloc {
+    width: 500px;
+    height: 150px;
+    color: rgb(41, 41, 41);
+    background-color: rgb(243, 243, 243);
+    border-radius: 12px; 
+    justify-content: center;
+    align-items: center;
+    margin: auto; 
+    margin-top: 40px;
+    display: flex; 
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5); 
+}
+
+.titre {
+    font-family: Montserrat, sans-serif; 
+    font-size: 3rem;
+    color: rgb(41, 41, 41);
+    margin: auto; 
+    text-align: center;
+}
+
+/* LES TROIS SUJETS */
+
+.image-container {
+    display: flex;               
+    justify-content: space-around; 
+    padding: 20px;              
+    overflow: hidden;          
+}
+
+.image-item {
+    flex: 1;                    
+    margin: 0 10px;            
+    text-align: center;         
+}
+
+.image-format1 {
+    width: 80%;
+    height: auto; 
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.image-format1:hover {
+    transform: scale(0.9); 
+    transition: transform 0.3s ease; 
+}
+
+.legende-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    margin: 0.5px auto;
+}
+
+.legende {
+    font-family: Montserrat ;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: rgb(41, 41, 41);
+    margin-top: 20px;
+    background-color: rgb(243, 243, 243);
+    cursor: pointer;
+    border-radius: 12px; 
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); 
+}
+
+.hide {
+    display: none; 
+    text-align: center;
+}
+
+
+/* NIVEAUX DE DIFFICULTE */
+
+.cadreniveau {
+    display: flex;
+    text-align: center;
+    border: 2px solid black;
+    background-color: rgb(112, 35, 235);
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5); 
+    max-width: 40%; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    word-wrap: break-word; 
+    margin: auto; 
+    flex-wrap: wrap; 
+    height: 180px;
+    margin-top: 50px;
+}
+
+.containerniveau {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 80px; 
+    margin-top: 100px;
+}
+
+.titreniveau {
+    font-family: Montserrat;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    box-sizing: border-box; 
+    word-wrap: break-word; 
+    margin: auto; 
+    flex-wrap: wrap; 
+}
+
+.niveau {
+    color: rgb(41, 41, 41);
+    background-color: rgb(243, 243, 243);
+    font-size: 50px;
+    font-family: Montserrat; 
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; 
+    transition: all 0.3s ease; /
+}
+
+.niveau:hover {
+    color: rgb(243, 243, 243);
+    background-color: rgb(58, 150, 74);
+    transform: scale(1.1); 
+}
+
+/* LES QUESTIONS */
+
+.question {
+    text-align: center;
+    font-family: Montserrat;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    padding: 20px; 
+    box-sizing: border-box; 
+    word-wrap: break-word; 
+    margin: auto; 
+}
+
+.cadrequestion {
+    display: flex;
+    text-align: center;
+    border: 2px solid black;
+    background-color: rgb(112, 35, 235);
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5); 
+    max-width: 90%; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    word-wrap: break-word; 
+    margin: auto; 
+    flex-wrap: wrap; 
+    height: 180px;
+    margin-top: 50px;
+}
+
+/* BOUTONS DES REPONSES */
+
+.colonne1 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+    margin-top: 40px;
+}
+
+.colonne2 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+    margin-top: 40px;
+}
+
+.row {
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+    margin: 0 auto; 
+    gap: 50px; 
+}
+
+.bouton {
+    display: inline-block;
+    color: rgb(41, 41, 41);
+    background-color: rgb(243, 243, 243);
+    font-size: 25px;
+    font-family: Montserrat; 
+    font-weight: 700;
+    border-radius: 12px; 
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); 
+    padding: 20px;
+    width: auto;
+    max-width: 100%;
+    height: auto; 
+}   
+
+.bouton:hover {
+    color: rgb(243, 243, 243);
+    background-color: rgb(58, 150, 74);
+    transform: scale(1.1); 
+}
+
+
+/* LES GIFS REPONSES */
+
+#successMessage,
+#feedbackMessage {
+    display: flex;
+    text-align: center;
+    margin-top: 100px;
+    font-family: Montserrat;
+    font-weight: 700;
+    color: white;
+    font-size: 30px;
+    padding: 50px;
+}
+
+.image-format {
+    display: flex;
+    justify-content: center;  
+}
+
+.imagemauvaiseréponse {
+    width: 250px;
+}
+
+.imagebonneréponse {
+    width: 300px;
+}
+
+/* LE SCORE FINAL */
+
+#scoreFinal {
+    display: none; 
+    display: flex;
+    text-align: center;
+    margin-top: 100px;
+    font-family: montserrat;
+    font-weight: 700;
+    color: white;
+    font-size: 50px;
+}
+
+/* BOUTON RETOUR A L ACCUEIL */
+
+#retourAccueil {
+    width: 330px;
+    height: 100px;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 30px;
+    background-color: rgb(183, 121, 212);
+    border: 2px solid black;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    margin: auto; 
+    margin-top: 40px;
+    display: flex; 
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); 
+    cursor: pointer;
+}
+
+#retourAccueil:hover {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease; 
+}
+
+
+/* BOUTON REJOUER */
+
+#boutonRejouer {
+    width: 330px;
+    height: 100px;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 30px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    border-radius: 50%;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    margin: auto; 
+    margin-top: 30px;
+    display: flex; 
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); 
+    cursor: pointer;
+}
+
+#boutonRejouer:hover {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease; 
+}
+
+/* LE RECAP */
+
+hr {
+    border: none;
+    height: 4px;
+    background-color: #ffffff;
+    width: 40%; /* Longueur */
+    margin: 20px auto; /* Centré */
+    border-radius: 5px; /* Coins arrondis */
+    margin-top: 80px;
+}
+
+.recap {
+    text-align: center;
+    margin-top: 50px;
+    font-family: montserrat;
+    font-weight: 700;
+    color: white;
+    font-size: 50px;
+}
+
+.listeRéponses {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    margin-top: 50px;
+    font-family: montserrat;
+    font-weight: 700;
+    color: white;
+    font-size: 30px;
+    margin: 50px;
+    list-style-type: none; /* Supprime les points */
+}
+
+.listeRéponses li {
+    margin-bottom: 30px; 
+}
+
+.question-récap {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid black;
+    background-color: rgb(112, 35, 235);
+    max-width: 90%; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    word-wrap: break-word; 
+    margin: auto; 
+    flex-wrap: wrap; 
+    max-height: 100%;
+}
+
+
+/* LE TIMER */
+
+.temps {
+    display: flex;
+    text-align: right;
+    margin-top: -200px;
+    margin-right: 90px;
+    font-family: Montserrat;
+    color: white;
+    font-size: 100px;
+    padding: 50px;
+}
+
+/* LE COMPTEUR DE QUESTIONS */
+
+.nombrequestion {
+    position: fixed;
+    bottom: 10px;             
+    right: 20px;    
+    font-family: Montserrat;
+    font-weight: 600;
+    color: white;
+    font-size: 50px;
+}
