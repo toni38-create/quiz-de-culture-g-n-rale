@@ -38,7 +38,7 @@ html {
     display: flex;               
     justify-content: space-around; 
     padding: 20px;              
-    overflow: hidden;          
+    overflow: hidden;
 }
 
 .image-item {
@@ -53,6 +53,7 @@ html {
     cursor: pointer;
     margin-top: 20px;
 }
+
 
 .image-format1:hover {
     transform: scale(0.9); 

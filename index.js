@@ -281,6 +281,7 @@ function verifierReponse(quizId, niveau, questionIndex, answerIndex, timerID = n
             // Disparition  des images pour les mauvaises réponses
             if (quizId === 'quiz1') {
                 document.getElementById('mauvaiseRéponseQuiz1').style.display = 'none'; // Enlève l'image pour quiz 1
+                
             } else if (quizId === 'quiz2') {
                 document.getElementById('mauvaiseRéponseQuiz2').style.display = 'none'; // Enlève l'image pour quiz 2
             } else if (quizId === 'quiz3') {

@@ -320,7 +320,7 @@ const questions = {
                 {
                     question: "Selon le modèle cosmologique actuel, quel phénomène a conduit à l'accélération de l'expansion de l'univers après la phase d'inflation primordiale ?",
                     answers: ["La matière noire", "L'énergie noire", "La décohérence quantique", "La théorie de la relativité générale"],
-                    correct: 1, // L'énergie noir 
+                    correct: 1, // L'énergie noire 
                 },
                 {
                     question: "Quel est l'élément chimique dont le symbole est He ?",
@@ -384,8 +384,8 @@ const questions = {
                 },
                 {
                     question: "Quel est le pourcentage approximatif de matière noire dans l'univers ?",
-                    answers: ["10%", "50%", "Une supernova", "90%"],
-                    correct: 2, // Une supernova
+                    answers: ["14%", "52%", "27%", "91%"],
+                    correct: 2, // 27%
                 },
             ],
 
