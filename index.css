@@ -10,7 +10,7 @@ body {
 
 
 /* Écrans de petite taille (téléphones) */
-@media (max-width: 200px) {
+@media (max-width: 728px) {
     body {
         background-color: rgb(107, 107, 252); 
     }
