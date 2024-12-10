@@ -8,15 +8,9 @@ body {
     margin: 0; 
 }
 
-/* Écrans de taille moyenne (tablettes) */
-@media (max-width: 768px) {
-    body {
-        background-color: rgb(150, 150, 252); /* Une couleur différente pour tester */
-    }
-}
 
 /* Écrans de petite taille (téléphones) */
-@media (max-width: 480px) {
+@media (max-width: 200px) {
     body {
         background-color: rgb(200, 200, 252); /* Encore une autre couleur */
     }
