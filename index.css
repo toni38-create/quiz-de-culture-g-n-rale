@@ -15,22 +15,6 @@ body {
     margin: 0; 
 }
 
-/* Écrans de petite taille (téléphones) */
-@media (max-width: 728px) {
-    body {
-        background-color: rgb(107, 107, 252); 
-    }
-    .image-container img {
-        width: 80%; /* Ajuster les images pour qu'elles soient moins larges */
-        margin-bottom: 10px;
-    }
-
-    .title, .button {
-        font-size: 1.2rem; /* Réduire légèrement la taille des polices */
-        text-align: center;
-    }
-}
-
 /* TITRE QUIZ CULTURE GENERALE */
 
 .bloc {
