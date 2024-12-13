@@ -1,3 +1,190 @@
 @media (max-width: 728px) {
+
+    body {
+        background-color: rgb(107, 107, 252);
+        margin: 10px !important; 
+    }
+
+    .bloc {
+    width: 90% !important;
+    }
+
+    .titre {
+    font-size: 2.2rem !important;
+    }
+
+    .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;   
+    }
+
+    .image-item {
+        width: 150px;
+    }
+
+    .legende {
+        display: flex;
+        flex-direction: column;
+        width: 100% !important;
+        font-size: 1rem !important;
+        margin-top: 0 !important;
+    }
+
+    .cadreniveau {
+    max-width: 80% !important; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    word-wrap: break-word; 
+    margin: auto; 
+    flex-wrap: wrap; 
+    height: 130px !important;
+    margin-top: 50px;
+    }
+
+    .titreniveau {
+        font-size: 30px !important;
+    }
+
+    .containerniveau {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        gap: 5px !important; 
+    }
+
+    .niveau {
+        font-size: 20px !important;
+    }
+
+    .cadrequestion {
+        display: flex;
+        text-align: center;
+        border: 2px solid black;
+        background-color: rgb(112, 35, 235);
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5) !important; 
+        max-width: 90%; 
+        padding: 20px; 
+        height: auto !important;
+        margin-top: 30px !important;
+    }
+
+    .question {
+        text-align: center;
+        font-family: Montserrat;
+        color: rgb(255, 255, 255);
+        font-size: 15px !important;
+    }
+
+    .bouton {
+        font-size: 10px !important;
+        max-width: 100%;
+        height: auto; 
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3) !important; 
+    }   
+
+    #successMessage,
+    #feedbackMessage {
+    display: flex;
+    text-align: center;
+    margin-top: 20px !important;
+    font-family: Montserrat;
+    font-weight: 700;
+    color: white;
+    font-size: 15px !important;
+    padding: 50px;
+}
+
+    .image-format {
+    display: flex;
+    justify-content: center;  
+    }
+
+    .imagemauvaiseréponse {
+    width: 150px !important;
+    }
+
+    .imagebonneréponse {
+    width: 150px !important;
+    }
+
+    .colonne1 {
+        display: flex;
+        flex-direction: column;
+        gap: 10px !important; 
+        margin-top: 40px;
+    }
     
+    .colonne2 {
+        display: flex;
+        flex-direction: column;
+        gap: 10px !important; 
+        margin-top: 40px;
+    }
+
+    .row {
+        display: flex;
+        justify-content: center; 
+        width: 100%;
+        margin: 0 auto; 
+        gap: 20px !important; 
+    }
+
+    #retourAccueil {
+        width: 220px !important;
+        height: 80px !important;
+        font-size: 20px !important;
+    }
+
+    #scoreFinal {
+        margin-top: 70px !important;
+        font-size: 25px !important;
+    }
+
+    #boutonRejouer {
+        width: 220px !important;
+        height: 80px !important;
+        font-size: 23px !important;
+    }
+
+    hr {
+        margin-top: 40px !important;
+    }
+    
+    .recap {
+        font-size: 25px !important;
+        margin-top: 25px !important;
+    }
+    
+    .listeRéponses {
+        font-size: 15px !important;
+        margin: 0px !important;
+    }
+    
+    .question-récap {
+        max-width: 70% !important; 
+    }
+
+    .temps {
+        position: fixed;
+        bottom: -30px;
+        left: 0px;    
+        font-family: Montserrat;
+        font-weight: 600;
+        color: rgb(255, 255, 255) !important;
+        font-size: 70px !important;
+    }
+
+    .nombrequestion {
+        font-size: 30px !important;
+        color: rgb(0, 0, 0) !important;
+        border: black solid 2px;
+        background-color: rgb(255, 255, 255);
+        bottom: 0px;             
+        right: 20px;
+        margin-bottom: 18px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); 
+        padding: 10px;
+    }
 }

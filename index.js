@@ -123,9 +123,8 @@ document.getElementById('quiz3-difficult' || 'quiz3').addEventListener('click', 
 function afficherQuestion(quizId, niveau, questionIndex, intervalID = null) {
 
     clearInterval(intervalID);
-
     document.getElementById('questionNombre').style.display = 'block'; // Compteur de questions 
-    document.getElementById('containerNiveauquiz1').style.display = 'none';
+    document.getElementById('containerNiveauquiz1').style.display = 'none';  
     document.getElementById('containerNiveauquiz2').style.display = 'none';
     document.getElementById('containerNiveauquiz3').style.display = 'none';
     document.getElementById('cadreNiveau').style.display = 'none';
@@ -133,8 +132,10 @@ function afficherQuestion(quizId, niveau, questionIndex, intervalID = null) {
     document.getElementById(quizId).style.display = 'block'; 
     currentQuiz = quizId; // Mettre à jour le quiz courant
     currentQuestionIndex = 0; // Réinitialiser l'index de la question
+
     let questionObj = questions[quizId][niveau][questionIndex];
     let questionElement;
+
     if (quizId === 'quiz1') {
         questionElement = document.getElementById('questionPhilo');
     } 
@@ -146,7 +147,9 @@ function afficherQuestion(quizId, niveau, questionIndex, intervalID = null) {
     }
     const buttons = document.querySelectorAll(`#${quizId} .bouton`);  // Mise à jour des boutons
     questionElement.innerText = questionObj.question;
+
     let timerID = startTimer(quizId, questionIndex);  // Démarrage du timer
+
     buttons.forEach((button, index) => {
         button.innerText = questionObj.answers[index];
         button.onclick = function() {
@@ -155,7 +158,6 @@ function afficherQuestion(quizId, niveau, questionIndex, intervalID = null) {
         };
     });
 }
-
 
 points = 0; // Réinitialisation des points au début du quiz
 
@@ -180,19 +182,17 @@ function startTimer(quizId, questionIndex) {
         
         if (tempsquestion <= 0) {
             clearInterval(timerID);  // Arrête le timer
+            sauvegardeRéponse(questionIndex, undefined);  // null ou "Non répondu" selon votre choix
             questionIndex++;  // Incrémente l'index pour la prochaine question
 
             // Vérifiez si la question suivante existe
             if (questionIndex < questions[quizId][niveau].length) {
-                console.log();
                 afficherQuestion(quizId, niveau, questionIndex);  // Affiche la nouvelle question
-                console.log(afficherQuestion);
-
             } else {
                 // Si c'est la dernière question, cache le timer
                 timerDiv.style.display = 'none'; 
                 scoreFinal(); 
-            console.log(scoreFinal);
+                console.log(scoreFinal);
             }
         }
     }, 1000);  // Appelle la fonction toutes les secondes
@@ -324,21 +324,29 @@ function scoreFinal() {
 let utilisateurRéponse = []; // Stock des réponses de l'utilisateur
 
 function sauvegardeRéponse(questionIndex, answerIndex) {
-    utilisateurRéponse[questionIndex] = answerIndex;  
+
+    if (answerIndex === undefined) { 
+        answerIndex = 'pas de réponse';
+        // Pas de réponse
+        utilisateurRéponse[questionIndex] = "Non répondu"; 
+    } else {
+        // Réponse donnée
+        utilisateurRéponse[questionIndex] = answerIndex;  
+    }
+
     console.log(`Réponse sauvegardée pour la question ${questionIndex + 1} : Réponse ${answerIndex}`);
     console.log('Toutes les réponses de l’utilisateur :', utilisateurRéponse);
 }
 
 const listeRéponses = document.getElementById("listeRéponses");
-   
-
+ 
 function afficherRecapitulatif() {
     listeRéponses.style.display = "block"; // Affiche la liste des réponses
     listeRéponses.innerHTML = ""; // Réinitialise le contenu de la liste
 
     utilisateurRéponse.forEach((answerIndex, index) => {
         const listItem = document.createElement("li"); // Crée un élément de liste
-        const answerText = questions[quizId][niveau][index].answers[answerIndex];  // Réponse de l'utilisateur 
+        let answerText = questions[quizId][niveau][index].answers[answerIndex];  // Réponse de l'utilisateur 
 
         let correctAnswerIndex = questions[quizId][niveau][index].correct;
         let correctAnswer = questions[quizId][niveau][index].answers[correctAnswerIndex];
@@ -347,7 +355,10 @@ function afficherRecapitulatif() {
 
         let resultat;
 
-        if (answerText === correctAnswer) {
+        if (answerText === undefined || answerText === null) {
+                answerText = "Pas de réponse";
+                resultat = `La bonne réponse était : ${correctAnswer}`;
+         } else if (answerText === correctAnswer) {
             resultat = 'Correct';
         } else {
             resultat = `La bonne réponse était : ${correctAnswer}`;

@@ -37,7 +37,7 @@ const questions = {
                     correct: 1, // Notre-Dame de Paris
                 },
                 {
-                    question: "Qui a écrit 'L'Imaginaire' ?",
+                    question: "Qui a écrit 'Le malade imaginaire' ?",
                     answers: ["René Descartes", "Jean-Paul Sartre", "Jean de La Fontaine", "Molière"],
                     correct: 3, // Molière
                 },
