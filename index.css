@@ -142,7 +142,8 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 8px; 
-    transition: all 0.3s ease; /
+    transition: all 0.3s ease; 
+    border: 2px solid black;
 }
 
 .niveau:hover {
