@@ -217,7 +217,8 @@ body {
     padding: 20px;
     width: auto;
     max-width: 100%;
-    height: auto; 
+    height: auto;
+    border: 2px solid black;
 }   
 
 .bouton:hover {
